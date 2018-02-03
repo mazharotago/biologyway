@@ -1,0 +1,69 @@
+{% extends "main_temp.html" %}
+
+
+
+{% block meta_title %}Bioinformatics Tools{% endblock %}
+{% block meta_description %}Following is the catalogue of most commonly used bioinformatics applications. These bioinformatics tools are
+user-friendly and free to use.{% endblock %}
+{% block meta_keywords %}bioinformatics tools, bioinformatics applications, bioinformatics databases,
+bioinformatics analysis,bioinformatics software{% endblock %}
+
+{% block page_title %}Bioinformatics Tools{% endblock %}
+
+
+
+
+
+{% block content %}
+
+<header class="masthead text-center d-flex">
+
+     <div class="container my-auto">
+         <h1 class="display-3">Bioinformatics Tools</h1><p>
+         <h4 class="mt-5">Following is the catalogue of most commonly used bioinformatics applications. These bioinformatics tools are
+user-friendly and free to use.</h4>
+    	<div class="row">
+			<div class="col-lg-10 mx-auto">
+				<ul class="event-list">
+                    <li>
+
+                        <img src="{{ url_for('static', filename='images/portfolio/DNA.png')  }}">
+
+
+
+						<div class="info">
+                            <a class="nav-link js-scroll-trigger" href="/tool/nucleotidecount">
+							<h2 class="title">DNA Nucleotides Composition</h2>
+							<p class="desc">Tells the composition of DNA by counting the frequency of G, C, A, T</p>
+                                </a>
+						</div>
+
+
+					</li>
+
+					<li>
+                        <img src="{{ url_for('static', filename='images/portfolio/DNA.png')  }}">
+
+						<div class="info">
+                            <a class="nav-link js-scroll-trigger" href="/tool/dnatornaconvert">
+							<h2 class="title">DNA to RNA Converter</h2>
+							<p class="desc">Converts the DNA sequence into RNA sequence.</p>
+                            </a>
+						</div>
+					</li>
+
+
+
+				</ul>
+			</div>
+		</div>
+	</div>
+</header>
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends "apps_template.html" %}
+
+{% block meta_title %}DNA Nucleotides Composition{% endblock %}
+{% block meta_description %}DNA Nucleotide Composition determines nucleic acid composition. It determines number of nucleotides (A, T, G, C).{% endblock %}"
+{% block meta_keywords %}nucleic acid composition, count nucleotides, number of nucleotide {% endblock %}
+{% block page_title %}DNA Nucleotides Composition{% endblock %}
+
+
+
+
+
+
+{% block content %}
+
+
+
+         <h1 class="display-3">DNA Nucleotides Composition</h1>
+    	<div class="row">
+			<div class="col-lg-10 mx-auto">
+				<ul class="event-list">
+
+<form action='/tool/nucleotidecount' method="post">
+  <div class="form-group">
+    <label for="nucleotide_seq">Enter your plain text nucleotide (DNA) sequence here:</label>
+    <textarea class="form-control" id="nucleotide_seq" name="nucleotide_seq" rows="10">GCTACCTACTACCGACCTA</textarea>
+  </div>
+
+
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+				</ul>
+			</div>
+		</div>
+
+
+
+{% endblock %}
+
+
+
+

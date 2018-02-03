@@ -1,0 +1,66 @@
+{% extends "apps_template.html" %}
+
+{% block meta_title %}DNA to RNA Converter{% endblock %}
+{% block meta_description %}DNA to RNA Converter converts DNA sequence to RNA sequence.{% endblock %}"
+{% block meta_keywords %}transcribe DNA, DNA to RNA, DNA to RNA transcription, dna to rna converter, dna to rna sequence{% endblock %}
+{% block page_title %}DNA to RNA Converter{% endblock %}
+
+
+{% block content %}
+
+
+
+<link href="{{ url_for('static', filename='css/special.css') }}" rel="stylesheet">
+<body>
+
+         <h1 class="display-3">DNA to RNA Converter</h1>
+    	<div class="row">
+			<div class="col-lg-10 mx-auto">
+				<ul class="event-list">
+                    <p>
+
+{% if dtr_seq[1] == "bad" %}
+                   <div class="alert alert-danger" role="alert">
+
+
+                    <strong>{{ "Invalid input:" }}</strong>
+                    {{ "Please provide the string of nucleotides consisting only of 'G', 'C', 'A', 'T'." }}
+                       </div>
+
+                    <br>
+                    <form action='/tool/nucleotidecount' method="post">
+  <div class="form-group">
+    <label for="nucleotide_seq">Enter your plain text nucleotide (DNA) sequence here:</label>
+    <textarea class="form-control" id="nucleotide_seq" name="nucleotide_seq" rows="10">{{ dtr_seq[0]  }}</textarea>
+  </div>
+
+
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% else %}
+                   <div class="container-fluid">
+
+
+                    <div class="alert alert-success" role="alert">
+  <h4 class="alert-heading">Nucleotide Sequence</h4>
+                        <form>
+                        <p><textarea class="form-control" id="nucleotide_seq" name="nucleotide_seq" rows="10">{{ dtr_seq[0]  }}</textarea></span></p></form>
+
+
+
+</div>
+                       </div>
+
+
+{% endif %}
+
+                    </ul>
+			</div>
+		</div>
+
+</body>
+
+
+{% endblock %}
